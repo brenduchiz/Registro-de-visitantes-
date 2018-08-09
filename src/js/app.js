@@ -29,11 +29,14 @@ firebase.initializeApp({
         document.getElementById("password").value = "";
         document.getElementById("empresa").value = "";
         document.getElementById("direccion").value = "";
+        console.log(vue)
+    vue.enviar();
 
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
     });
+
  }
 
      //Leer documentos
@@ -41,7 +44,7 @@ firebase.initializeApp({
     db.collection("users").onSnapshot((querySnapshot) => {
         tabla.innerHTML = "";
         querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().email}`);
+           // console.log(`${doc.id} => ${doc.data().email}`);
             tabla.innerHTML += `
             <tr>
             <th scope="row">${doc.id}</th>
@@ -108,6 +111,62 @@ firebase.initializeApp({
         }
         }
 
-        
+         //Leer documentos empresas
+     var tabla2 = document.getElementById("tabla2");
+     db.collection("empresas").onSnapshot((querySnapshot) => {
+         tabla2.innerHTML = "";
+         querySnapshot.forEach((doc) => {
+             console.log(doc.data().email)
+            // console.log(`${doc.id} => ${doc.data().email}`);
+             tabla2.innerHTML += `
+             <tr>
+             <th scope="row">${doc.id}</th>
+             <td>${doc.data().email}</td>
+             <td>${doc.data().nombre}</td>
+
+             <td><button class="btn btn-danger" onclick="eliminar('${doc.id}')">Eliminar</button></td>
+             <td><button class="btn btn-warning" onclick="editar('${doc.id}','${doc.data().email}','${doc.data().nombre}','${doc.data().password}','${doc.data().empresa}','${doc.data().dirección}')">Editar</button></td>
+           </tr>`
+         });
+     });
     
+     (function(){
+        emailjs.init("user_rkhG8ABbW9wspIRpvfENm");
+     })();
+    const vue    = new Vue({
+        el: '#app',
+        data(){
+            return {
+                from_name: '',
+                from_email: '',
+                from_password: '',
+                from_empresa: '',
+                from_direccion: '',
+            }
+        },
+        methods: {
+            enviar(){
+                let data = {
+                    from_name: this.from_name,
+                    from_email: this.from_email,
+                    from_password: this.from_password,
+                    from_empresa: this.from_empresa,
+                    from_direccion: this.from_direccion,
+                };
+                
+                emailjs.send("gmail","notificaci_n_visitantes", data)
+                .then(function(response) {
+                    if(response.text === 'OK'){
+                        alert('El correo se ha enviado de forma exitosa');
+                    }
+                   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                }, function(err) {
+                    alert('Ocurrió un problema al enviar el correo');
+                   console.log("FAILED. error=", err);
+                });
+            }
+        }
+    });
     
+
+    console.log(vue)
