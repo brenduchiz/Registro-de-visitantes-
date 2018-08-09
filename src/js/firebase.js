@@ -1,4 +1,4 @@
-let firebase = firebase.initializeApp({
+firebase.initializeApp({
   apiKey: 'AIzaSyBgC8VSVMtFdRtd0fGVxQVTG_DQskngoUw',
   authDomain: 'registrovisitantes-8986e.firebaseapp.com',
   projectId: 'registrovisitantes-8986e'
