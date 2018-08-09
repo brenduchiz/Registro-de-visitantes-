@@ -8,6 +8,12 @@ describe('client', () => {
       assert.equal(typeof client.register, 'function');
     });
   });
+
+  describe('client.photo', () => {
+    it('deberia ser una funcion', () => {
+      assert.equal(typeof client.photo, 'function');
+    });
+  });
 });
 
 describe('admin', () => {
