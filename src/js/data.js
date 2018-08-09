@@ -48,7 +48,8 @@ window.client = {
         canvas.width = width;
         canvas.height = height;
         canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-        let photo = canvas.toDataURL('image/png');
+        let finalPhoto = canvas.toDataURL('image/png');
+        return finalPhoto;
       };
 
       startbutton.addEventListener('click', event => {
@@ -63,5 +64,3 @@ window.client = {
 window.admin = {
   stats: () => { }
 };
-
-window.client.photo();
