@@ -1,12 +1,3 @@
-firebase.initializeApp({
-  apiKey: 'AIzaSyBgC8VSVMtFdRtd0fGVxQVTG_DQskngoUw',
-  authDomain: 'registrovisitantes-8986e.firebaseapp.com',
-  projectId: 'registrovisitantes-8986e'
-});
-
-// Initialize Cloud Firestore through Firebase
-let db = firebase.firestore();
-
 window.client = {
   save: () => {
     // Agregar docuemento
@@ -85,7 +76,6 @@ window.client = {
         canvas.height = height;
         canvas.getContext('2d').drawImage(video, 0, 0, width, height);
         let finalPhoto = canvas.toDataURL('image/png');
-        video.stop();
         return finalPhoto;
       };
 
