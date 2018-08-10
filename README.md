@@ -2,7 +2,7 @@
 
 #  WELCOME  
 
-**Somos Code-Ants ,y Terminal 1 ,nos ha contratado para diseñar una pagina web que le permita llevar un mejor control de los susuarios que ingresan a su establecimiento ya que ese es el principal problema que ellos presenta en este momento.**
+**Somos Code-Ants ,y Terminal 1 ,nos ha contratado para diseñar una pagina web que le permita llevar un mejor control de los sus usuarios que ingresan a su establecimiento ya que ese es el principal problema que ellos presenta en este momento.**
 
 **Mediante un proceso de Investigacion se han indentificado los puntos de mejora de dicho Co Working;y el primero que pudimos encontrar es el metodo de registro de visitantes que se emplea; es un proceso tedioso y tardado que  dificulta el acceso a dicho lugar .Si mas de un visitante intentan ingresar a dicho establecimiento el metodo de registro se hace demasiado largo ,haciendo que los usuarios se sientan incomodes e inclusive molestos.**
 
