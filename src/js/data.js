@@ -1,3 +1,6 @@
+
+
+
 window.client = {
   register: () => { },
   photo: () => {
@@ -50,8 +53,9 @@ window.client = {
         canvas.getContext('2d').drawImage(video, 0, 0, width, height);
         let finalPhoto = canvas.toDataURL('image/png');
         return finalPhoto;
+        
       };
-
+      
       startbutton.addEventListener('click', event => {
         takepicture();
         event.preventDefault();
@@ -60,7 +64,7 @@ window.client = {
     ();
   }
 };
-
+console.log()
 window.admin = {
   stats: () => { }
 };

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+</head>
+<body>
+
+
+        <div class="container1">
+                        <div class="row">
+                        
+                        
+                        <div class="form-group mx-auto" style="width: 550px;">
+                                        <img src="CoW.png" alt="cover" height="100" width="1500" class="img-fluid" alt="Responsive image">
+                                        
+                                </div>    
+                </div>
+
+        </div>
+                
+<div id="delate">
+
+                
+
+    <div class="container1">
+                <div class="row">
+             
+           
+                <div class="form-group mx-auto" style="width: 550px;">
+                        
+                        <input type="text" class="form-control col-form-label-lg" id="nombre"  placeholder="Nombre Completo">
+                 </div>    
+        </div>
+
+</div>
+
+
+   <div class="container2">
+    <div class="row">
+            <div class="form-group mx-auto" style="width: 550px;">
+                
+                    <input type="email" class="form-control  col-form-label-lg" id="email" placeholder="Correo Electronico">
+           </div>      
+    </div>
+</div>
+
+<div class="container3">
+        <div class="row">
+                <div class="form-group mx-auto " style="width: 550px;">
+                    
+                        <input type="compañia" class="form-control  col-form-label-lg" id="empresa" placeholder="Compañia">
+               </div>      
+        </div>
+    </div>
+
+    <div class="container4">
+  
+                <div class="form-group mx-auto titule1" style="width:550px;">
+                            <div class="form-group data3">
+                                    <label for="exampleSelect1" class="bmd-label-floating titule3">¿A quien visita?</label>
+                                    <select class="form-control" id="visitados">
+                                      <option>Juan</option>
+                                      <option>Alejandra</option>
+                                      <option>Ivan</option>
+                                      <option>Eva</option>
+                                      <option>Esteban</option>
+                                    </select>
+                                  </div>
+                  </div>
+                </div>
+                  <div class="container5">
+            
+                  <div class="form-group mx-auto titule2" style="width:550px;">
+            
+                        <div class="form-group data4">
+                                <label for="exampleSelect1" class="bmd-label-floating ">Motivo</label>
+                                <select class="form-control" id="motivo">
+                                  <option>Reunion</option>
+                                  <option>Personal</option>
+                                  <option>Cita</option>
+                                  <option>Otro</option>
+                                  
+                                </select>
+                              </div>     
+            
+                  </div>
+                </div>
+
+                <div class="container">
+            
+                                <div class="form-group mx-auto button2" style="width: 50px;"> 
+                                <section id="">
+                                  <button id="camera" ><i class="fas fa-camera-retro iconCamera"></i></button>
+                                  
+                                </section>
+                                <section id="photo"></section>
+                    
+                                
+                        </div>
+                </div>
+
+
+
+
+                  <div class="row">
+            
+                
+                      <div class="form-group mx-auto button1" style="width: 119px;"> 
+                      
+                      <button  type="submit" id="Registrarte" class=" btn btn-raised btn-info">Registrarte</button> 
+                    </div>
+            </div>
+
+    
+
+    
+        </div>
+
+    
+
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>   
+<script src="js/app.js"></script>
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+
+</body>
+</html>
+
