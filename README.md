@@ -1,3 +1,5 @@
+# Registro-de-visitantes-
+
 #  WELCOME  
 
 **Somos Code-Ants ,y Terminal 1 ,nos ha contratado para diseñar una pagina web que le permita llevar un mejor control de los susuarios que ingresan a su establecimiento ya que ese es el principal problema que ellos presenta en este momento.**
@@ -30,4 +32,3 @@ Ya que su establecimiento es usado por programadores   y personas del mundo Tech
 
  ### El siguiente diseño es el que usa el Administrador de la aplicacion ,que es el que le permite  tener un mejor control sobre las visitas:
  ![admi](imagenes/diseño-admi.png)
-
