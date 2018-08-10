@@ -72,7 +72,7 @@ console.log(foto)
               <p class="card-text"><b>Empresa:</b>  ${doc.data().empresa}</p>
               <p class="card-text"><b>Visita a :</b>  ${doc.data().visitado}</p>
               <p class="card-text"><b>Motivo de visita:</b>  ${doc.data().motivo}</p>
-              <a href="#" class="btn btn-raised btn-info">Finalizar Registro</a>
+              <a href="#" class="btn btn-raised btn-raised">Finalizar Registro</a>
             </div>
           </div>
           </div>
