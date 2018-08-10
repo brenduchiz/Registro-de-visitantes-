@@ -3,9 +3,9 @@ describe('client', () => {
     assert.equal(typeof client, 'object');
   });
 
-  describe('client.save', () => {
+  describe('client.register', () => {
     it('deberia ser una funcion', () => {
-      assert.equal(typeof client.save, 'function');
+      assert.equal(typeof client.register, 'function');
     });
   });
 
@@ -21,21 +21,9 @@ describe('admin', () => {
     assert.equal(typeof admin, 'object');
   });
   
-  describe('admin.showTable', () => {
+  describe('admin.stats', () => {
     it('deberia ser una funcion', () => {
-      assert.equal(typeof admin.showTable, 'function');
-    });
-  });
-
-  describe('admin.delete', () => {
-    it('deberia ser una funcion', () => {
-      assert.equal(typeof admin.delete, 'function');
-    });
-  });
-
-  describe('admin.edit', () => {
-    it('deberia ser una funcion', () => {
-      assert.equal(typeof admin.edit, 'function');
+      assert.equal(typeof admin.stats, 'function');
     });
   });
 });
