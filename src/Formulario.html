@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +12,12 @@
         <!-- Firestore -->
         <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+        
 </head>
 
 <body>
-        <div class="container1">
+
+        <div id="app" class="container1">
                 <div class="form-group mx-auto" style="width: 550px;">
                         <img src="images/tlogo.svg" alt="cover" class="img-fluid" alt="Responsive image">
                 </div>
@@ -24,7 +25,7 @@
                         <div class="container1">
                                 <div class="row">
                                         <div class="form-group mx-auto" style="width: 550px;">
-                                                <input type="text" class="form-control col-form-label-lg" id="nombre" placeholder="Nombre Completo">
+                                                <input type="text" class="form-control col-form-label-lg" id="nombre" placeholder="Nombre Completo" >
                                         </div>
                                 </div>
                                 <div class="container2">
@@ -84,6 +85,7 @@
                                         </div>
                                 </div>
                         </div>
+                        
                         <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
                                 crossorigin="anonymous"></script>
                         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -93,9 +95,11 @@
                         <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
                                 crossorigin="anonymous"></script>
                         <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
-                        <script src="js/firebase.js"></script>                  
+                        <script src="js/firebase.js"></script> 
+                        <script src="js/email.min.js"></script>               
                         <script src="js/app.js"></script>
                         <script src="js/main.js"></script>
                         <script src="js/data.js"></script>
+                        
 </body>
 </html>
