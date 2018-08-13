@@ -1,33 +1,16 @@
-
-
-
-let signLogin =document.getElementById("button-login-entrar");
-
-
-
+let signLogin = document.getElementById('button-login-entrar');
 // Ingresa el usuario
-
-
 signLogin.addEventListener('click', event => {
-
-let emailUser = document.getElementById("email").value;
-let passwordUser =document.getElementById("password").value;
-
-  
-
-  console.log(emailUser)
-  console.log(passwordUser)
-
-
+  let emailUser = document.getElementById('email').value;
+  let passwordUser = document.getElementById('password').value;
+  console.log(emailUser);
+  console.log(passwordUser);
   firebase.auth().signInWithEmailAndPassword(emailUser, passwordUser)
-  
     .then(function() {
       setTimeout((event) => {
         window.location.reload();
       }, 2000);
       window.location.assign('../views/vistaAdmi.html');
-
-
     })
     .catch(function(error) {
       let errorCode = error.code;
@@ -35,14 +18,4 @@ let passwordUser =document.getElementById("password").value;
       console.log(errorCode);
       alert(errorMessage);
     });
-
-}); 
-
-
-
-
-
-
-
-
-
+});
