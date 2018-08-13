@@ -40,12 +40,12 @@ Ya que su establecimiento es usado por programadores   y personas del mundo Tech
 https://drive.google.com/drive/folders/1hTLYWs_n99vnKC1gavYAdSL_4fX0GBq1
 
 
-- [ ] We Work - Compañia multinacional  que brinda espacios de trabajo compartidos.
+- [ ] **We Work - Compañia multinacional  que brinda espacios de trabajo compartidos.**
 
 [WeWork]
 https://en.wikipedia.org/wiki/WeWork
 
-- [ ] CraftWork Coworking - Compañia que  brinda espacios de trabajo compartidos con un excelente ambiente .
+- [ ] **CraftWork Coworking - Compañia que  brinda espacios de trabajo compartidos con un excelente ambiente.**
 
 [CraftWork]
 http://www.craftworksmexico.com/
@@ -53,7 +53,7 @@ http://www.craftworksmexico.com/
 
 
 #  WELCOME 
-### Para que WELCOME  sea uno de los mejores productos se realizo un estudio de mercado comparando los programas existentes 
+ **Para que WELCOME  sea uno de los mejores productos se realizo un estudio de mercado comparando los programas existentes.**
 ![benchmark](imagenes/benchmark2_opt.png)
 
 
@@ -61,10 +61,9 @@ http://www.craftworksmexico.com/
 
 
 # Proceso de Desarrollo y Maquetacion 
- ### Se elaboraron diseños de baja fidelidad para definir el flujo del programa.
+**Se elaboraron diseños de baja fidelidad para definir el flujo del programa.**
  ![sketch-baja](imagenes/sketch-baja.gif)
-
-### Tambien se uso un tablero Kanban para hacer fluido el tiempo para el proyecto.
+**Tambien se uso un tablero Kanban para hacer fluido el tiempo para el proyecto.**
 ![kanban](imagenes/kanban.gif)
 
 #### A continuacion se muestra el diseño de como luce la aplicacion en sus distintas plataformas.
@@ -76,7 +75,7 @@ http://www.craftworksmexico.com/
 
 
  #### Testeo 
- Se probó esta aplicacion con algunos usuarios para ver si era una aplicacion facil de usar e intuitiva.
+ **Se probó esta aplicacion con algunos usuarios para ver si era una aplicacion facil de usar e intuitiva.**
 
  >El registro está rápido.
  ![testeo](imagenes/testeo1.gif)
