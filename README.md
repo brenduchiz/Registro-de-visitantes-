@@ -30,13 +30,13 @@ Ya que su establecimiento es usado por programadores   y personas del mundo Tech
 >Rayos ya voy tarde - Ana Monserrat Martinez
 
 
-[Encuestas]:https://jazmin64.typeform.com/to/fniSpo
+[Encuestas]https://jazmin64.typeform.com/to/fniSpo
 
 
 **Tambien se realizaron entrevistas  para conocer si el problema es exclusivo de este establecimiento o hay mas lugares con el mismo problema, y descubrimos que algunos Coworkings ya cuentan con un metodo agil de registro, como son  los establecimientos**
 
 
-[Entrevistas]:https://drive.google.com/drive/folders/1hTLYWs_n99vnKC1gavYAdSL_4fX0GBq1
+[Entrevistas]:(https://drive.google.com/drive/folders/1hTLYWs_n99vnKC1gavYAdSL_4fX0GBq1)
 
 
 - [ ] We Work - Compañia multinacional  que brinda espacios de trabajo compartidos.
