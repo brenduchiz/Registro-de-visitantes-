@@ -54,6 +54,12 @@ http://www.craftworksmexico.com/
 
 #  WELCOME 
  **Para que WELCOME  sea uno de los mejores productos se realizo un estudio de mercado comparando los programas existentes.**
+
+
+
+
+
+ 
 ![benchmark](imagenes/benchmark2_opt.png)
 
 
@@ -63,10 +69,19 @@ http://www.craftworksmexico.com/
 # Proceso de Desarrollo y Maquetacion 
 **Se elaboraron diseños de baja fidelidad para definir el flujo del programa.**
  ![sketch-baja](imagenes/sketch-baja.gif)
+
+
+
+
 **Tambien se uso un tablero Kanban para hacer fluido el tiempo para el proyecto.**
 ![kanban](imagenes/kanban.gif)
 
 #### A continuacion se muestra el diseño de como luce la aplicacion en sus distintas plataformas.
+
+
+
+
+
  ### La primera es el diseño donde el visitante se registra :
 
  ![registro](imagenes/registro-ipad-.gif)
