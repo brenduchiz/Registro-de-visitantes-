@@ -7,15 +7,17 @@ document.getElementById('camera').addEventListener('click', event => {
 
     <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col-2 col-md-2 col-lg-4">
+      <div class="col-2 col-md-2 col-lg-3">
      
       </div>
-      <div class="col-8 col-md-8 col-lg-3">
+      <div class="col-8 col-md-8 col-lg-4">
            
       <video id="video"></video>
 
       <br>
-      <button id="startbutton">Tomar fotografia</button>
+
+      <button id="startbutton" ><i class="fas fa-camera-retro iconCamera"></i></button>  
+   
       <br>
 
                  
@@ -46,7 +48,7 @@ window.client = {
           video = document.querySelector('#video'),
           canvas = document.querySelector('#canvas'),
           startbutton = document.querySelector('#startbutton'),
-          width = 320,
+          width = 500,
           height = 0;
   
         navigator.getMedia = (navigator.getUserMedia ||

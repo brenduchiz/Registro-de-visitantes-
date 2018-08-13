@@ -26,7 +26,7 @@ padding-left: 30px;
     height:200px; 
     width: 200px;
     position: absolute;
-    padding-top: 30px;  
+    padding-top: 50px;  
       
  }
 
@@ -47,28 +47,28 @@ color: black;
  .line{
 
    
-   margin-top: 180px;
+   margin-top: 190px;
       
  }
 
  .line1{
 
    
-   margin-top: 70px;
+   margin-top: 80px;
       
  }
 
  .line2{
 
    
-   margin-top: 70px;
+   margin-top: 80px;
       
  }
 
  .line3{
 
     
-   margin-top: 70px;
+   margin-top: 80px;
       
  }
 
@@ -82,13 +82,13 @@ color: black;
 
   #camera{
     
-    font-size: 25px;
+    font-size: 30px;
    
   }
 
   .buttonCamera{
 
-    padding-top: 30px;
+    padding-top: 35px;
   }
 
   .button{
@@ -144,12 +144,12 @@ color: black;
  }
 
  #video{
-
+margin-top: 120px;
       
  }
 
  #startbutton{
-   
-  background-color: #74BF93;
-        
+ margin-top: 50px;  
+ margin-left: 230px;
+  font-size: 35px;  
    }
