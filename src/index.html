@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Registro de Visitantes</title>
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  </head>
+  <body>
+      
+    <div class="container">
+            <h1>Agregar Usuarios</h1>
+
+            <input type="email" id="email" placeholder="email" v-model= "from_email"class="form-control my-3">
+            <input type="text" id="nombre" placeholder="nombre y apellido" v-model="from_name" class="form-control my-3">
+            <input type="password" id="password" placeholder="password" v-model="from_password" class="form-control my-3">
+            <input type="text" id="empresa" placeholder="empresa" v-model="from_empresa"class="form-control my-3">
+            <input type="text" id="direccion" placeholder="dirección" v-model="from_direccion" class="form-control my-3">
+            <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
+
+            <section id="">
+              <button id="camera">Activar camara</button>
+            </section>
+            <section id="photo"></section>
+
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Compañia</th>
+                        <th scope="col">Dirección</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabla">
+                    </tbody>
+                  </table>  
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Nombre</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabla2">
+                    </tbody>
+                  </table>
+    
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
