@@ -1,5 +1,5 @@
 window.client = {
-  guardar: () => {
+  /* guardar: () => {
     let email = document.getElementById('email').value;
     let nombre = document.getElementById('nombre').value;
     let empresa = document.getElementById('empresa').value;
@@ -53,7 +53,7 @@ window.client = {
           </div>`;
       });
     });
-  },
+  }, */
 
   photo: () => {
     let storage = firebase.storage();
@@ -135,43 +135,46 @@ window.client = {
     let newDates = new Date();
     let time = newDates.toLocaleTimeString();
     let date = newDates.toLocaleDateString();
+    
+    if (email === '' || nombre === '' || empresa === '') {
+      alert('Debes llenar todos los campos');
+    } else {
+      window.client.enviar();
 
-    window.client.enviar();
-
-    db.collection('users').add({
-      time: time,
-      date: date,
-      nombre: nombre,
-      email: email,
-      empresa: empresa,
-      visitado: visitados,
-      motivo: motivo,
-      photo: photito
-    })
-      .then((docRef) => {
-        console.log('Document written with ID: ', docRef.id);
-        document.getElementById('email').value = '';
-        document.getElementById('nombre').value = '';
-        document.getElementById('empresa').value = '';
-        document.getElementById('visitado').value = '';
-        document.getElementById('motivo').value = '';
+      db.collection('users').add({
+        time: time,
+        date: date,
+        nombre: nombre,
+        email: email,
+        empresa: empresa,
+        visitado: visitados,
+        motivo: motivo,
+        photo: photito
       })
-      .catch((error) => {
-        console.error('Error adding document: ', error);
-      });
+        .then((docRef) => {
+          console.log('Document written with ID: ', docRef.id);
+          document.getElementById('email').value = '';
+          document.getElementById('nombre').value = '';
+          document.getElementById('empresa').value = '';
+          document.getElementById('visitado').value = '';
+          document.getElementById('motivo').value = '';
+        })
+        .catch((error) => {
+          console.error('Error adding document: ', error);
+        });
 
 
-    // Leer documentos
-    let delate = document.getElementById('delate');
-    db.collection('users').onSnapshot((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(`${doc.id}`);
-        console.log(doc.data());
-        console.log(nombre);
-        let saveId = doc.id;
-        console.log(saveId);
-        let savePhotito = doc.data().photo;
-        delate.innerHTML = `
+      // Leer documentos
+      let delate = document.getElementById('delate');
+      db.collection('users').onSnapshot((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(`${doc.id}`);
+          console.log(doc.data());
+          console.log(nombre);
+          let saveId = doc.id;
+          console.log(saveId);
+          let savePhotito = doc.data().photo;
+          delate.innerHTML = `
             <div class="row">            
             <div class="card" style="width: auto; margin: 100px auto;">
             <div class="card-body">
@@ -187,9 +190,9 @@ window.client = {
             </div>
           </div>
           </div>`;
+        });
       });
-    });
-
+    }
 
     Finalizar = ()=> {
       window.location.assign('../index.html');

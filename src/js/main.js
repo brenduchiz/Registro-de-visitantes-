@@ -1,5 +1,5 @@
-//Direccionamiento a Interfaz Registro 
+// Direccionamiento a Interfaz Registro 
 document.getElementById('colorbtn').addEventListener('click', event => {
-  window.location.assign("views/Formulario.html");
+  window.location.assign('views/Formulario.html');
 });
 
