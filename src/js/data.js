@@ -113,8 +113,8 @@ window.client = {
         console.log(doc.data());
         console.log(nombre);
         let saveId = doc.id;
-        console.log(saveId);        
-        let savePhotito = doc.data().photo;        
+        console.log(saveId);
+        let savePhotito = doc.data().photo;
         delate.innerHTML = `
             <div class="row">            
             <div class="card" style="width: auto; margin: 100px auto;">
@@ -176,12 +176,32 @@ window.client = {
 };
 
 window.admin = {
+  drawData: () => {
+    let tabla = documento.getElementById(' tabla ');
+    db.colección(' usuarios ').onSnapshot((querySnapshot) => {
+      tabla.innerHTML = ' ';
+      querySnapshot.forEach((doc) => {
+        // console.log (`$ {doc.id} => $ {doc.data (). email}`);
+        tabla.innerHTML += `
+         <tr>
+         <th scope = " row " > $ { doc . id } </ th >
+         <td>${doc.datos().correo electrónico } </ td >
+         <td>${doc.datos().nombre} </ td >
+         <td>${doc.datos().contraseña} </ td >
+         <td>${doc.datos().empresa} </ td >
+         <td>${doc.datos().direccion} </ td >
+         <td><button  class = " btn btn-danger "  onclick = " eliminar ( ' $ {doc.id} ' ) " > Eliminar </ button > </ td >
+         <td><button  class = " btn btn-warning "  onclick = " editar ( ' $ {doc.id} ' , ' $ {doc.data (). email} ' , ' $ {doc.data (). nombre } ' , ' $ {doc.data (). contraseña} ' , ' $ {doc.data (). empresa} ' , ' $ {doc.data (). dirección} ' ) " > Editar </ button > < / td >
+       </ tr > `;
+      });
+    });
+  },
   delete: (id) => {
     db.collection('users').doc(id).delete()
       .then(() => {
-        console.log('Document successfully deleted!');      
+        console.log('Document successfully deleted!');
       }).catch(() => {
-        console.error('Error removing document: ', error);      
-      });    
+        console.error('Error removing document: ', error);
+      });
   }
 };
