@@ -1,80 +1,56 @@
-
-#delate{
-    
-   background-color: white;
+#delate {
+  background-color: white;
 }
 
-.container{
-    
-    padding-top: 20px;
+.container {
+  padding-top: 20px;
 }
 
-.container1{
-    
-    padding-top: 10px;
+.container1 {
+  padding-top: 10px;
 }
 
-.container2{
-    
-    padding-top: 5px;
-}
-.container3{
-    
-    padding-top: 10px;
+.container2 {
+  padding-top: 5px;
 }
 
-
-.data3{
-    
-    padding-top: 50px;
-}
-.data4{
-    
-    padding-top: 50px;
+.container3 {
+  padding-top: 10px;
 }
 
-.iconCamera{
-
-    font-size: 30px;
-    
-
+.data3 {
+  padding-top: 50px;
 }
 
-.titule1{
-    
-padding-top: 30px;
-
+.data4 {
+  padding-top: 50px;
 }
 
-.titule2{
-    
-    padding-top: 30px;
-
+.iconCamera {
+  font-size: 30px;
 }
 
-.titule3{
-    
-    padding-top: 20px;
-
+.titule1 {
+  padding-top: 30px;
 }
 
-.button1{
-    
-    padding-top: 20px;
-
+.titule2 {
+  padding-top: 30px;
 }
 
-.button2{
-    
-    margin-bottom: 0px;
-
+.titule3 {
+  padding-top: 20px;
 }
 
-
-.card{
-    
-    text-align:center;
-    margin-left: 170px;
-  
+.button1 {
+  padding-top: 20px;
 }
 
+.button2 {
+  margin-bottom: 0;
+}
+
+.card {
+  text-align: center;
+  margin-left: 170px;
+}
