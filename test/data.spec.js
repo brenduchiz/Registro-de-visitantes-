@@ -3,15 +3,21 @@ describe('client', () => {
     assert.equal(typeof client, 'object');
   });
 
-  describe('client.register', () => {
-    it('deberia ser una funcion', () => {
-      assert.equal(typeof client.register, 'function');
-    });
-  });
-
   describe('client.photo', () => {
     it('deberia ser una funcion', () => {
       assert.equal(typeof client.photo, 'function');
+    });
+  });
+
+  describe('client.guardar', () => {
+    it('deberia ser una funcion', () => {
+      assert.equal(typeof client.guardar, 'function');
+    });
+  });
+
+  describe('client.edit', () => {
+    it('deberia ser una funcion', () => {
+      assert.equal(typeof client.edit, 'function');
     });
   });
 });
@@ -21,9 +27,9 @@ describe('admin', () => {
     assert.equal(typeof admin, 'object');
   });
   
-  describe('admin.stats', () => {
+  describe('admin.delete', () => {
     it('deberia ser una funcion', () => {
-      assert.equal(typeof admin.stats, 'function');
+      assert.equal(typeof admin.delete, 'function');
     });
   });
 });
