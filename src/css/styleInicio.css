@@ -4,6 +4,19 @@
   background-color: black;
   font-size: 40px;
   }
+
+
+  #buttonOut{
+    margin-top: 250px;
+    margin-left: 100px;
+    position: absolute;
+    background-color: black;
+    font-size: 40px;
+    }
+
+
+
+
   
   .icon{
   position: absolute;
