@@ -188,25 +188,18 @@ window.client = {
               <p class="card-text"><b>Visita a :</b>  ${doc.data().visitado}</p>
               <p class="card-text"><b>Motivo de visita:</b>  ${doc.data().motivo}</p>
               <a href="#" class="btn btn-raised btn-raised" id="editRegister">Editar Campos</a>
-<<<<<<< HEAD
               <a href="#" onclick="Finalizar()" class="btn btn-raised btn-raised" id="registerFinish">Finalizar Registro</a>
-=======
-              <a href="#" class="btn btn-raised btn-raised" id="registerFinish">Finalizar Registro</a>
->>>>>>> 8618f3b0faa097d766c9c0dbfe975c7b1bafbd84
             </div>
           </div>
           </div>`;
       });
     });
-<<<<<<< HEAD
 
 
     Finalizar = ()=> {
       window.location.assign('../index.html');
     }
 
-=======
->>>>>>> 8618f3b0faa097d766c9c0dbfe975c7b1bafbd84
   },
   edit: () => {
     delate.style.display = 'none';
