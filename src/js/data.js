@@ -174,3 +174,14 @@ window.client = {
     };
   }
 };
+
+window.admin = {
+  delete: (id) => {
+    db.collection('users').doc(id).delete()
+      .then(() => {
+        console.log('Document successfully deleted!');      
+      }).catch(() => {
+        console.error('Error removing document: ', error);      
+      });    
+  }
+};
