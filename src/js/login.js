@@ -10,7 +10,7 @@ signLogin.addEventListener('click', event => {
       setTimeout((event) => {
         window.location.reload();
       }, 2000);
-      window.location.assign('../views/vistaAdmi.html');
+      window.location.assign('../Inicio.html');
     })
     .catch(function(error) {
       let errorCode = error.code;
