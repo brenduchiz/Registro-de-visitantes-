@@ -82,6 +82,8 @@ window.client = {
     let time = newDates.toLocaleTimeString();
     let date = newDates.toLocaleDateString();
 
+    window.client.enviar();
+
     db.collection('users').add({
       time: time,
       date: date,
@@ -172,5 +174,30 @@ window.client = {
           console.error('Error updating document: ', error);
         });
     };
+  },
+  enviar: () => {
+
+    let from_name1 = document.getElementById("nombre").value;
+    let from_email1 = document.getElementById("email").value;
+    let from_empresa1 = document.getElementById("empresa").value;
+    let from_motivo1 = document.getElementById("motivo").value;
+    console.log(from_name1)
+      let data = {
+          from_name: from_name1,
+          from_email: from_email1,
+          from_empresa: from_empresa1,
+          from_motivo: from_motivo1,
+      };
+      emailjs.init("user_rkhG8ABbW9wspIRpvfENm");
+      emailjs.send("gmail","notificaci_n_visitantes", data)
+      .then(function(response) {
+          if(response.text === 'OK'){
+              alert('El correo se ha enviado de forma exitosa');
+          }
+         console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+      }, function(err) {
+          alert('Ocurrió un problema al enviar el correo');
+         console.log("FAILED. error=", err);
+      });
   }
-};
+}
