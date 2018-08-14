@@ -1,4 +1,60 @@
 window.client = {
+  guardar: () => {
+    let email = document.getElementById('email').value;
+    let nombre = document.getElementById('nombre').value;
+    let empresa = document.getElementById('empresa').value;
+    let visitados = document.getElementById('visitados').value;
+    let motivo = document.getElementById('motivo').value;
+    window.client.enviar();
+
+    db.collection('users').add({
+      nombre: nombre,
+      email: email,
+      empresa: empresa,
+      visitado: visitados,
+      motivo: motivo
+    })
+      .then((docRef) => {
+      //  console.log('Document written with ID: ', docRef.id);
+        document.getElementById('email').value = '';
+        document.getElementById('nombre').value = '';
+        document.getElementById('empresa').value = '';
+        document.getElementById('visitados').value = '';
+        document.getElementById('motivo').value = '';
+      })
+      .catch((error) => {
+        console.error('Error adding document: ', error);
+      });
+
+
+    // Leer documentos
+    let delate = document.getElementById('delate');
+    db.collection('users').onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        // console.log(`${doc.id} => ${doc.data().email}`);
+        // console.log(doc.data());
+        // console.log(nombre);
+        // vue.enviar();
+        
+        delate.innerHTML = `
+            <div class="row">            
+            <div class="card" style="width: auto; margin: 100px auto;">
+            <div class="card-body">
+            <h5 class="card-title">Bienvenidx a Terminal 1</h5>
+              <h6 class="card-title">${doc.data().nombre}</h6>
+              <p class="card-text"><b>Correo:</b>  ${doc.data().email}</p>
+              <p class="card-text"><b>Empresa:</b>  ${doc.data().empresa}</p>
+              <p class="card-text"><b>Visita a :</b>  ${doc.data().visitados}</p>
+              <p class="card-text"><b>Motivo de visita:</b>  ${doc.data().motivo}</p>
+              <a href="#" class="btn btn-raised btn-raised" onclick="edit();">Editar Campos</a>
+              <a href="#" class="btn btn-raised btn-raised">Finalizar Registro</a>
+            </div>
+          </div>
+          </div>`;
+      });
+    });
+  },
+
   photo: () => {
     let storage = firebase.storage();
     (() => {
@@ -57,8 +113,6 @@ window.client = {
         const newVisitorKey = firebase.database().ref().child('visitors').push().key;
         let images = storageRef.child(newVisitorKey);
         sessionStorage.setItem('visitorKey', newVisitorKey);
-
-
         images.putString(finalPhoto, 'data_url').then((snapshot) => {
           console.log('Uploaded a data_url string!');
         });
@@ -81,6 +135,8 @@ window.client = {
     let newDates = new Date();
     let time = newDates.toLocaleTimeString();
     let date = newDates.toLocaleDateString();
+
+    window.client.enviar();
 
     db.collection('users').add({
       time: time,
@@ -127,19 +183,24 @@ window.client = {
               <p class="card-text"><b>Visita a :</b>  ${doc.data().visitado}</p>
               <p class="card-text"><b>Motivo de visita:</b>  ${doc.data().motivo}</p>
               <a href="#" class="btn btn-raised btn-raised" id="editRegister">Editar Campos</a>
-              <a href="#" class="btn btn-raised btn-raised" id="registerFinish">Finalizar Registro</a>
+              <a href="#" onclick="Finalizar()" class="btn btn-raised btn-raised" id="registerFinish">Finalizar Registro</a>
             </div>
           </div>
           </div>`;
       });
     });
+
+
+    Finalizar = ()=> {
+      window.location.assign('../index.html');
+    };
   },
   edit: () => {
     delate.style.display = 'none';
     document.getElementById('email').value = email;
     document.getElementById('nombre').value = nombre;
     document.getElementById('empresa').value = empresa;
-    document.getElementById('visitado').value = visitados;
+    document.getElementById('visitados').value = visitados;
     document.getElementById('motivo').value = motivo;
     var boton = document.getElementById('boton');
     boton.innerHTML = 'Editar';
@@ -172,36 +233,30 @@ window.client = {
           console.error('Error updating document: ', error);
         });
     };
-  }
-};
-
-window.admin = {
-  drawData: () => {
-    let tabla = documento.getElementById(' tabla ');
-    db.colección(' usuarios ').onSnapshot((querySnapshot) => {
-      tabla.innerHTML = ' ';
-      querySnapshot.forEach((doc) => {
-        // console.log (`$ {doc.id} => $ {doc.data (). email}`);
-        tabla.innerHTML += `
-         <tr>
-         <th scope = " row " > $ { doc . id } </ th >
-         <td>${doc.datos().correo electrónico } </ td >
-         <td>${doc.datos().nombre} </ td >
-         <td>${doc.datos().contraseña} </ td >
-         <td>${doc.datos().empresa} </ td >
-         <td>${doc.datos().direccion} </ td >
-         <td><button  class = " btn btn-danger "  onclick = " eliminar ( ' $ {doc.id} ' ) " > Eliminar </ button > </ td >
-         <td><button  class = " btn btn-warning "  onclick = " editar ( ' $ {doc.id} ' , ' $ {doc.data (). email} ' , ' $ {doc.data (). nombre } ' , ' $ {doc.data (). contraseña} ' , ' $ {doc.data (). empresa} ' , ' $ {doc.data (). dirección} ' ) " > Editar </ button > < / td >
-       </ tr > `;
-      });
-    });
   },
-  delete: (id) => {
-    db.collection('users').doc(id).delete()
-      .then(() => {
-        console.log('Document successfully deleted!');
-      }).catch(() => {
-        console.error('Error removing document: ', error);
+
+  enviar: () => {
+    let from_name1 = document.getElementById('nombre').value;
+    let from_email1 = document.getElementById('email').value;
+    let from_empresa1 = document.getElementById('empresa').value;
+    let from_motivo1 = document.getElementById('motivo').value;
+    console.log(from_name1);
+    let data = {
+      from_name: from_name1,
+      from_email: from_email1,
+      from_empresa: from_empresa1,
+      from_motivo: from_motivo1,
+    };
+    emailjs.init('user_rkhG8ABbW9wspIRpvfENm');
+    emailjs.send('gmail', 'notificaci_n_visitantes', data)
+      .then(function(response) {
+        if (response.text === 'OK') {
+          alert('El correo se ha enviado de forma exitosa');
+        }
+        console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
+      }, function(err) {
+        alert('Ocurrió un problema al enviar el correo');
+        console.log('FAILED. error=', err);
       });
   }
 };

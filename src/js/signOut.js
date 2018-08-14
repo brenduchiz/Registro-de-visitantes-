@@ -1,8 +1,6 @@
-
-
 let logOut = document.getElementById('buttonOut');
-// Cierra Sesión
+// Registro
 logOut.addEventListener('click', element => {
   console.log('Saliendo');
-  window.location.assign('../index.html');
+  window.location.assign('../Inicio.html');
 });
